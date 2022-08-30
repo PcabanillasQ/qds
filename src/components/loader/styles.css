@@ -1,0 +1,36 @@
+.spinner {
+  --size: 50px;
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+}
+
+.spinner__circle1,
+.spinner__circle2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.spinner__circle2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
